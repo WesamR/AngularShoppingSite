@@ -1,0 +1,11 @@
+<div class="container" id="container">
+  <div class="form-container sign-up" >
+    <form>
+      <h1>Welcome to Celer</h1>
+
+      <input type="email" name="email" [(ngModel)]="signIn.email" placeholder="Email">
+      <input type="password" name="password"  [(ngModel)]="signIn.password" placeholder="Password">
+      <button (click)="onSignIn()">Submit</button>
+    </form>
+  </div>
+</div>

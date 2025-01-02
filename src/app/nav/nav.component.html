@@ -1,0 +1,35 @@
+<nav class="navbar-dark" class="navbar navbar-expand-lg bg-light mb-5">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" routerLink="/home">{{title}}<img src="../../favicon.ico" height="45" width="45"/></a>
+
+    <div class="navbar-title flex-grow-1 text-center">
+      <h2>{{activeTitle}}</h2>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav me-auto">
+        <a class="nav-link" routerLink="/home">Home</a>
+        <a class="nav-link" routerLink="/store">Store</a>
+        <a class="nav-link" routerLink="/inventory">Inventory</a>
+        <a class="nav-link" routerLink="/cart">Cart</a>
+        <a class="nav-link" routerLink="/locations">Map</a>
+        <div class="navbar-nav align-content-center">
+        </div>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" routerLink="/signup" >Signup</a>
+        <a class="nav-link" routerLink="/login">Login</a>
+        <a class="nav-link" routerLink="/attribute">Attributes</a>
+      </div>
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link" routerLink="/camera" >Camera</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+

@@ -1,0 +1,21 @@
+<div class="container" style="height: 800px">
+
+  <div class="d-flex  justify-content-center">
+    <div class="text-center">
+      <h3 class="text-body-secondary" >Store Locations Near YOU (:</h3>
+      <img src="assets/img/pointing.jpeg" height="300" width="200">
+    </div>
+  </div>
+  <h4 class="">Latitude: {{ position?.lat }}</h4>
+  <h4 class="">Longitude: {{ position?.lon }}</h4>
+  <!--<h4>Error: {{ error?.message }}</h4>-->
+  <hr>
+  <div class="row justify-content-center">
+  </div>
+  <br>
+  <div>
+    <div class="container" id="mapContainer" style="width: auto; height: 400px"></div>
+  </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="header-section">
+        <h2 class="store-title">Welcome to {{title}}!</h2>
+        <p class="store-description">Only the best here!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let item of inventory" class="col-md-4">
+      <div class="card mb-4">
+        <img [src]="item.image" class="card-img-top" alt="Product Image" height="450" width="300">
+        <div class="card-body">
+          <h5 class="card-title">{{ item.productName }}</h5>
+          <p class="card-text">Price: ${{ item.price }}</p>
+          <p class="card-text">Quantity: {{ item.quantity }}</p>
+          <p class="card-text">Description: {{ item.description }}</p>
+          <div class="button-group">
+
+            <input type="number" [(ngModel)]="item.selectedQuantity" min="1" [max]="item.quantity" class="form-control mb-2" placeholder="Enter quantity">
+
+            <button (click)="addToCart(item)" class="btn btn-primary">Add to Cart</button>
+            <button [routerLink]="['/details', item.id]" class="btn btn-primary float-end">View Details</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

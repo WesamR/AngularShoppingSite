@@ -1,0 +1,53 @@
+<!-- Not working -->
+
+<div class="m-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Edit Item</h2>
+    </div>
+    <div class="card-body">
+      <form #itemForm="ngForm">
+        <div class="mb-3">
+          <label for="txtProductName">Product Name</label>
+          <input id="txtProductName" type="text" class="form-control"
+                 name="txtProductName"
+                 [(ngModel)]="inventoryItem.productName"
+                 #productName="ngModel"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="txtDescription">Description</label>
+          <input id="txtDescription" type="text" class="form-control"
+                 name="txtDescription"
+                 [(ngModel)]="inventoryItem.description"
+                 #description="ngModel"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="txtQuantity">Quantity</label>
+          <input id="txtQuantity" type="number" class="form-control"
+                 name="txtQuantity"
+                 [(ngModel)]="inventoryItem.quantity"
+                 #quantity="ngModel"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="txtPrice">Price</label>
+          <input id="txtPrice" type="number" class="form-control"
+                 name="txtPrice"
+                 [(ngModel)]="inventoryItem.price"
+                 #price="ngModel"
+          >
+        </div>
+        <div class="mb-3">
+          <label for="fileImage">Product Image</label>
+          <input id="fileImage" type="file" class="form-control"
+                 name="fileImage" (change)="onFileChange($event)"
+          >
+        </div>
+        <button type="button" id="btnAdd" class="btn btn-primary" (click)="onModifyClick()">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+

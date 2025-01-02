@@ -1,0 +1,39 @@
+<div class="m-4">
+  <div class="card">
+    <div class="card-header">
+      <h2>Cart</h2>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        @for (item of items;track $index) {
+          <li class="list-group-item d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img *ngIf="item.image" [src]="item.image" alt="Product Image" height="40" width="40" class="me-3">
+              <div>
+                <h5 class="mb-0">{{ item.productName }}</h5>
+                <p class="mb-0">Price: <strong>${{ (item.price * item.quantity).toFixed(2) }}</strong></p>
+                <p class="mb-0">Quantity: <strong>{{ item.selectedQuantity }}</strong></p>
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" class="btn btn-primary btn-sm me-2" (click)="onModifyClick(item)">
+                Modify
+              </button>
+              <button type="button" class="btn btn-danger btn-sm" (click)="onDeleteClick(item)">
+                Delete
+              </button>
+            </div>
+          </li>
+        } @empty {
+          <h2> Cart Is Empty ):</h2>
+          <h4>Please click "Add To Cart" on anything you would like to buy, and it will show here.</h4>
+        }
+      </ul>
+    </div>
+    <div class="card-footer">
+      <h3>Total Cost: ${{totalCost.toFixed(2)}}</h3>
+      <button type="button" class="btn btn-success" (click)="checkout()">Checkout</button>
+
+    </div>
+  </div>
+</div>
